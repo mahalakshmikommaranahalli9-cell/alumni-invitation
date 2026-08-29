@@ -1,0 +1,24 @@
+.gallery {
+  text-align: center;
+  margin: 50px auto;
+}
+.gallery h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+.photos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.photos img {
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+}
+.photos img:hover {
+  transform: scale(1.05);
+}
