@@ -1,13 +1,107 @@
-.video {
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.container {
+  text-align: center;
+  padding: 50px 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #ffcc00, #ff0066, #00ffcc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s infinite alternate;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  animation: slideIn 2s ease-in-out;
+}
+
+.details {
+  font-size: 1.2em;
+  margin: 20px auto;
+  max-width: 600px;
+  line-height: 1.8;
+  animation: fadeUp 2s ease-in-out;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  color: #fff;
+  background: #ff0066;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s, background 0.3s;
+  animation: pulse 2s infinite;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  background: #00ffcc;
+}
+
+/* Animations */
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ffcc00; }
+  to { text-shadow: 0 0 20px #00ffcc; }
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideIn { from { transform: translateX(-100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+@keyframes fadeUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px #ff0066; }
+  50% { box-shadow: 0 0 25px #00ffcc; }
+  100% { box-shadow: 0 0 10px #ff0066; }
+}
+
+/* Gallery */
+.gallery {
   text-align: center;
   margin: 50px auto;
 }
-.video h2 {
+.gallery h2 {
   font-size: 2em;
   margin-bottom: 20px;
   color: #ffcc00;
 }
-.video iframe {
+.photos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.photos img {
+  width: 250px;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+}
+.photos img:hover {
+  transform: scale(1.05);
+}
+
+/* Location */
+.location {
+  text-align: center;
+  margin: 50px auto;
+}
+.location h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #00ffcc;
 }
