@@ -4,90 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JIT Alumni Meet 2026 Invitation</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    .container {
-      text-align: center;
-      padding: 50px 20px;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-      background: linear-gradient(90deg, #ffcc00, #ff0066, #00ffcc);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: glow 2s infinite alternate;
-    }
-
-    h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      animation: slideIn 2s ease-in-out;
-    }
-
-    .details {
-      font-size: 1.2em;
-      margin: 20px auto;
-      max-width: 600px;
-      line-height: 1.8;
-      animation: fadeUp 2s ease-in-out;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      color: #fff;
-      background: #ff0066;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: transform 0.3s, background 0.3s;
-      animation: pulse 2s infinite;
-    }
-
-    .button:hover {
-      transform: scale(1.1);
-      background: #00ffcc;
-    }
-
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #ffcc00; }
-      to { text-shadow: 0 0 20px #00ffcc; }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideIn {
-      from { transform: translateX(-100%); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
-    }
-
-    @keyframes fadeUp {
-      from { transform: translateY(50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 10px #ff0066; }
-      50% { box-shadow: 0 0 25px #00ffcc; }
-      100% { box-shadow: 0 0 10px #ff0066; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <div class="container">
@@ -102,5 +21,24 @@
     </div>
     <a href="#" class="button">Confirm Your Presence</a>
   </div>
+
+  <!-- College Photo Gallery -->
+  <section class="gallery">
+    <h2>Memories of JIT</h2>
+    <div class="photos">
+      <img src="images/jit-campus.jpg" alt="JIT Campus">
+      <img src="images/seminar-hall.jpg" alt="Seminar Hall">
+      <img src="images/alumni-group.jpg" alt="Alumni Gathering">
+    </div>
+  </section>
+
+  <!-- Event Location -->
+  <section class="location">
+    <h2>📍 Event Location</h2>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.9276395523684!2d75.95476517510289!3d14.431333586035196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bba24d005150937%3A0xca6744a41dfffdce!2sJain%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1787999168691!5m2!1sen!2sin"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+  </section>
 </body>
 </html>
