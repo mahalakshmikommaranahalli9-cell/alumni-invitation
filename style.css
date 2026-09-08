@@ -1,8 +1,3 @@
-/* =========================================
-   JIT ALUMNI MEET 2026
-   PREMIUM INVITATION WEBSITE
-========================================= */
-
 * {
     margin: 0;
     padding: 0;
@@ -21,9 +16,9 @@ body {
 }
 
 section {
-    position: relative;
     min-height: 100vh;
-    padding: 100px 7%;
+    padding: 100px 8%;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,7 +29,7 @@ section {
 h2 {
     font-size: clamp(38px, 5vw, 70px);
     line-height: 1.15;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 p {
@@ -46,21 +41,17 @@ p {
     letter-spacing: 5px;
     font-size: 13px;
     margin-bottom: 20px;
-    text-transform: uppercase;
 }
 
 
-/* =========================================
-   HERO
-========================================= */
+/* HERO */
 
 .hero {
-    min-height: 100vh;
-
-    background-image:
+    background:
         linear-gradient(
-            rgba(0,0,0,0.72),
-            rgba(0,0,0,0.90)
+            90deg,
+            rgba(0, 0, 0, 0.95),
+            rgba(0, 0, 0, 0.55)
         ),
         url("jit-building.jpg");
 
@@ -74,20 +65,7 @@ p {
     content: "";
     position: absolute;
     inset: 20px;
-
-    border: 1px solid rgba(225,183,79,0.7);
-
-    pointer-events: none;
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 30px;
-
-    border: 1px solid rgba(225,183,79,0.25);
-
-    pointer-events: none;
+    border: 1px solid rgba(218, 171, 73, 0.65);
 }
 
 .hero-overlay {
@@ -96,371 +74,235 @@ p {
 
     background:
         radial-gradient(
-            circle at center,
+            circle,
             rgba(218,171,73,0.15),
-            transparent 55%
+            transparent 60%
         );
 }
 
 .hero-content {
     position: relative;
-    z-index: 5;
-
+    z-index: 2;
     max-width: 1100px;
-
-    animation: heroEnter 1.5s ease forwards;
-}
-
-@keyframes heroEnter {
-
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 
 /* LOGO */
 
-.jit-logo {
-    width: 105px;
-    height: 105px;
+.top-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 
-    object-fit: contain;
-
-    margin-bottom: 20px;
-
-    filter:
-        drop-shadow(0 0 12px rgba(255,210,100,0.5));
-
-    animation: logoFloat 4s ease-in-out infinite;
+    margin-bottom: 30px;
 }
 
-@keyframes logoFloat {
+.jit-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
 
-    0%,100% {
-        transform: translateY(0);
-    }
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
 
-    50% {
-        transform: translateY(-8px);
-    }
+.logo-text strong {
+    letter-spacing: 2px;
+}
+
+.logo-text span {
+    color: #d9aa45;
+    font-size: 13px;
+    letter-spacing: 3px;
 }
 
 
 /* HERO TEXT */
 
-.invited {
-    color: #e0b957;
-
-    letter-spacing: 6px;
-
-    font-size: 14px;
-
-    margin-bottom: 20px;
+.small-title {
+    color: #d9aa45;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
 }
 
-.present {
-    color: #ddd4bd;
-
-    font-size: 14px;
-
-    letter-spacing: 2px;
-}
-
-.line {
-    width: 170px;
-    height: 1px;
-
-    background: #d9aa45;
-
-    margin: 18px auto;
-}
-
-.association {
-    color: #aaa;
-
-    font-size: 14px;
-}
-
-.association-name {
-    color: #e2bd62;
-
+.association-text {
     font-size: 18px;
-
-    letter-spacing: 2px;
-
-    margin-top: 5px;
+    letter-spacing: 4px;
+    color: #f5e6bd;
 }
 
-.hero h1 {
-    margin-top: 30px;
+.organizes {
+    color: #aaa;
+    font-style: italic;
+    margin: 8px 0 15px;
+}
 
+.event-title h1 {
     font-size: clamp(65px, 10vw, 130px);
-
-    line-height: 0.85;
-
-    letter-spacing: 8px;
-
-    color: #f6e9c7;
-
-    text-shadow:
-        0 0 15px rgba(255,220,130,0.5),
-        0 0 45px rgba(218,171,73,0.25);
+    letter-spacing: 7px;
+    line-height: 0.9;
 }
 
-.hero h1 span {
+.event-title .gold {
     color: #d9aa45;
 }
 
 .year {
-    font-size: clamp(55px, 8vw, 95px);
-
+    font-size: clamp(50px, 7vw, 90px);
     color: #d9aa45;
-
-    font-weight: bold;
-
-    margin: 10px 0;
-
-    text-shadow:
-        0 0 25px rgba(218,171,73,0.5);
+    margin-top: 10px;
 }
 
-.welcome {
-    color: #d4c7a7;
-
-    letter-spacing: 4px;
-
-    font-size: 12px;
-
-    margin: 20px 0 35px;
+.tagline {
+    margin: 25px 0 35px;
+    color: #e6c46e;
+    letter-spacing: 3px;
+    font-size: 14px;
 }
 
 
-/* =========================================
-   HERO INFO
-========================================= */
+/* INFO */
 
 .hero-info {
     display: flex;
-
     justify-content: center;
-
+    flex-wrap: wrap;
     gap: 15px;
 
-    flex-wrap: wrap;
-
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
-.hero-info div {
-    width: 220px;
+.info-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 
-    padding: 20px 15px;
+    width: 280px;
+    padding: 20px;
 
-    background: rgba(0,0,0,0.45);
-
-    border: 1px solid rgba(218,171,73,0.45);
-
-    backdrop-filter: blur(8px);
-
-    transition: 0.4s;
+    background: rgba(0,0,0,0.6);
+    border: 1px solid rgba(218,171,73,0.5);
 }
 
-.hero-info div:hover {
-    transform: translateY(-8px);
-
-    border-color: #e6c46e;
-
-    box-shadow:
-        0 10px 35px rgba(218,171,73,0.2);
+.info-icon {
+    font-size: 32px;
 }
 
-.hero-info span {
+.info-box span,
+.info-box strong,
+.info-box small {
     display: block;
-
-    font-size: 28px;
-
-    margin-bottom: 8px;
 }
 
-.hero-info strong {
-    display: block;
+.info-box span {
+    color: #999;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
 
+.info-box strong {
     color: #e3bd62;
-
-    font-size: 13px;
-
-    letter-spacing: 1px;
+    margin: 4px 0;
 }
 
-.hero-info small {
-    display: block;
-
+.info-box small {
     color: #aaa;
-
-    margin-top: 5px;
-
-    font-size: 11px;
 }
 
 
-/* =========================================
-   BUTTON
-========================================= */
+/* BUTTON */
 
-.gold-btn,
-.map-btn {
+.gold-btn {
     display: inline-block;
 
-    padding: 16px 32px;
+    padding: 16px 35px;
+
+    color: #f5e5b6;
+    text-decoration: none;
 
     border: 1px solid #d9aa45;
 
-    color: #f5e5b6;
-
-    text-decoration: none;
-
     letter-spacing: 2px;
 
-    font-size: 13px;
-
-    position: relative;
-
-    overflow: hidden;
-
     transition: 0.4s;
-
-    z-index: 1;
 }
 
-.gold-btn::before,
-.map-btn::before {
-    content: "";
-
-    position: absolute;
-
-    left: -100%;
-    top: 0;
-
-    width: 100%;
-    height: 100%;
-
+.gold-btn:hover {
     background: #d9aa45;
-
-    transition: 0.4s;
-
-    z-index: -1;
-}
-
-.gold-btn:hover::before,
-.map-btn:hover::before {
-    left: 0;
-}
-
-.gold-btn:hover,
-.map-btn:hover {
-    color: #000;
+    color: black;
 
     box-shadow:
-        0 0 30px rgba(218,171,73,0.4);
+        0 0 30px rgba(218,171,73,0.5);
 }
 
 
-/* =========================================
-   SCROLL
-========================================= */
+/* SCROLL */
 
-.scroll-down {
+.scroll {
     position: absolute;
-
-    bottom: 28px;
+    bottom: 25px;
 
     color: #aaa;
-
-    font-size: 11px;
-
     letter-spacing: 3px;
+    font-size: 11px;
 
     animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
 
-    0%,100% {
-        transform: translateY(0);
-    }
-
     50% {
         transform: translateY(10px);
     }
+
 }
 
 
-/* =========================================
-   INVITATION
-========================================= */
+/* INVITATION */
 
 .invitation {
+
     background:
         radial-gradient(
-            circle at center,
-            #251b08,
-            #070707 70%
+            circle,
+            #261b08,
+            #050505 70%
         );
+
 }
 
 .message {
-    max-width: 760px;
-
+    max-width: 750px;
     color: #c9c1ad;
-
     margin-bottom: 20px;
-
-    font-size: 17px;
 }
 
-.ornament {
-    color: #d9aa45;
+.gold-line {
+    width: 180px;
+    height: 2px;
 
-    font-size: 30px;
+    background: #d9aa45;
 
-    margin-bottom: 20px;
-
-    animation: rotateStar 5s linear infinite;
-}
-
-@keyframes rotateStar {
-
-    to {
-        transform: rotate(360deg);
-    }
+    margin: 15px 0 30px;
 }
 
 .quote {
     margin-top: 30px;
-
-    padding: 25px 35px;
+    padding: 25px;
 
     border-left: 2px solid #d9aa45;
     border-right: 2px solid #d9aa45;
 
     color: #e3bd62;
-
     font-style: italic;
-
-    font-size: 20px;
 }
 
 
-/* =========================================
-   DETAILS
-========================================= */
+/* DETAILS */
 
 .details {
     background: #050505;
@@ -468,26 +310,18 @@ p {
 
 .cards {
     display: flex;
-
-    gap: 25px;
-
-    justify-content: center;
-
     flex-wrap: wrap;
-
-    max-width: 1000px;
-
-    width: 100%;
+    justify-content: center;
+    gap: 25px;
 }
 
 .card {
     width: 280px;
-
     min-height: 250px;
 
     padding: 40px 25px;
 
-    border: 1px solid rgba(218,171,73,0.35);
+    border: 1px solid rgba(218,171,73,0.4);
 
     background:
         linear-gradient(
@@ -496,53 +330,27 @@ p {
             rgba(255,255,255,0.01)
         );
 
-    position: relative;
-
-    transition: 0.5s;
-}
-
-.card::before {
-    content: "";
-
-    position: absolute;
-
-    inset: 8px;
-
-    border: 1px solid rgba(218,171,73,0.08);
+    transition: 0.4s;
 }
 
 .card:hover {
-    transform: translateY(-12px);
-
+    transform: translateY(-10px);
     border-color: #d9aa45;
-
-    box-shadow:
-        0 20px 40px rgba(0,0,0,0.5),
-        0 0 30px rgba(218,171,73,0.15);
 }
 
 .card-icon {
     font-size: 45px;
-
     margin-bottom: 20px;
 }
 
 .card h3 {
     color: #d9aa45;
-
     letter-spacing: 3px;
-
-    font-size: 15px;
-
     margin-bottom: 15px;
 }
 
 .card p {
-    color: #eee;
-
     font-size: 18px;
-
-    margin-bottom: 8px;
 }
 
 .card small {
@@ -550,338 +358,311 @@ p {
 }
 
 
-/* =========================================
-   LOCATION
-========================================= */
+/* CAMPUS */
 
-.location {
+.campus {
+
     background:
         radial-gradient(
-            circle at center,
+            circle,
             #211706,
             #050505 70%
         );
+
 }
 
-.location-box {
-    width: min(760px, 95%);
+.campus-image {
+    width: min(950px, 95%);
+    height: 500px;
 
-    padding: 55px 35px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.05),
-            rgba(255,255,255,0.01)
-        );
-
-    border: 1px solid rgba(218,171,73,0.55);
-
-    box-shadow:
-        0 0 45px rgba(218,171,73,0.08);
-}
-
-.location-icon {
-    font-size: 55px;
-
-    margin-bottom: 15px;
-
-    animation: locationPulse 2s infinite;
-}
-
-@keyframes locationPulse {
-
-    0%,100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.12);
-    }
-}
-
-.location-box h3 {
-    color: #e2bd62;
-
-    font-size: 22px;
-
-    letter-spacing: 2px;
-}
-
-.location-subtitle {
-    color: #aaa;
-
-    letter-spacing: 3px;
-
-    margin-top: 8px;
-}
-
-.address {
-    max-width: 600px;
-
-    margin: 25px auto;
-
-    color: #ddd;
-}
-
-.venue-info {
-    padding: 20px;
-
-    border-top: 1px solid rgba(218,171,73,0.3);
-    border-bottom: 1px solid rgba(218,171,73,0.3);
-
-    margin-bottom: 30px;
-}
-
-.venue-info span {
-    display: block;
-
-    color: #888;
-
-    font-size: 11px;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 8px;
-}
-
-.venue-info strong {
-    color: #e2bd62;
-
-    letter-spacing: 2px;
-}
-
-.map-btn {
-    margin-top: 5px;
-}
-
-
-/* =========================================
-   COUNTDOWN
-========================================= */
-
-.countdown-section {
-    background:
-        linear-gradient(
-            rgba(0,0,0,0.85),
-            rgba(0,0,0,0.95)
-        );
-}
-
-.countdown {
-    display: flex;
-
-    gap: 20px;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-}
-
-.countdown div {
-    width: 140px;
-    height: 140px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-
-    border: 1px solid rgba(218,171,73,0.5);
-
-    background: rgba(255,255,255,0.03);
-
-    transition: 0.4s;
-}
-
-.countdown div:hover {
-    transform: scale(1.06);
-
-    border-color: #e5bd61;
-}
-
-.countdown span {
-    font-size: 45px;
-
-    color: #e0b957;
-
-    font-weight: bold;
-}
-
-.countdown small {
-    color: #999;
-
-    letter-spacing: 2px;
-
-    font-size: 10px;
-}
-
-.countdown-note {
-    margin-top: 25px;
-
-    color: #777;
-
-    font-size: 13px;
-}
-
-
-/* =========================================
-   MEMORIES
-========================================= */
-
-.memories {
-    background:
-        radial-gradient(
-            circle at center,
-            #241a08,
-            #050505 70%
-        );
-}
-
-.memory-image {
     position: relative;
-
-    width: min(900px, 95%);
-
-    height: 430px;
-
     overflow: hidden;
 
-    border: 1px solid rgba(218,171,73,0.45);
-
-    box-shadow:
-        0 20px 50px rgba(0,0,0,0.6);
+    border: 1px solid rgba(218,171,73,0.5);
 }
 
-.memory-image img {
+.campus-image img {
     width: 100%;
     height: 100%;
 
     object-fit: cover;
 
-    transition: 0.8s;
+    transition: 0.7s;
 }
 
-.memory-image:hover img {
-    transform: scale(1.06);
+.campus-image:hover img {
+    transform: scale(1.05);
 }
 
-.memory-overlay {
+.campus-overlay {
     position: absolute;
 
-    inset: auto 0 0 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     padding: 35px;
 
     background:
         linear-gradient(
             transparent,
-            rgba(0,0,0,0.9)
+            rgba(0,0,0,0.95)
         );
 }
 
-.memory-overlay p {
-    color: #d9aa45;
-
-    letter-spacing: 4px;
-
-    font-size: 13px;
+.campus-overlay h3 {
+    color: #e2bd62;
+    letter-spacing: 3px;
 }
 
-.memory-overlay span {
+.campus-overlay p {
     color: white;
-
-    font-size: 18px;
 }
 
 
-/* =========================================
-   FINAL
-========================================= */
+/* LOCATION */
+
+.location {
+
+    background:
+        radial-gradient(
+            circle,
+            #241a08,
+            #050505 70%
+        );
+
+}
+
+.location-box {
+
+    width: min(750px, 95%);
+
+    padding: 50px 30px;
+
+    border: 1px solid rgba(218,171,73,0.55);
+
+    background:
+        rgba(255,255,255,0.03);
+
+}
+
+.location-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.location-box h3 {
+    color: #e2bd62;
+    letter-spacing: 2px;
+}
+
+.location-name {
+    color: #aaa;
+    letter-spacing: 3px;
+    margin: 10px 0;
+}
+
+.address {
+    color: #ddd;
+    max-width: 550px;
+    margin: 25px auto;
+}
+
+.venue {
+    padding: 20px;
+
+    border-top:
+        1px solid rgba(218,171,73,0.3);
+
+    border-bottom:
+        1px solid rgba(218,171,73,0.3);
+
+    margin-bottom: 30px;
+}
+
+.venue span,
+.venue strong {
+    display: block;
+}
+
+.venue span {
+    color: #888;
+    letter-spacing: 3px;
+    font-size: 11px;
+}
+
+.venue strong {
+    color: #e2bd62;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+
+/* COUNTDOWN */
+
+.countdown-section {
+    background: #050505;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.time-box {
+    width: 140px;
+    height: 140px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border: 1px solid rgba(218,171,73,0.5);
+
+    background:
+        rgba(255,255,255,0.03);
+}
+
+.time-box span {
+    font-size: 45px;
+    color: #d9aa45;
+}
+
+.time-box small {
+    color: #999;
+    letter-spacing: 2px;
+}
+
+
+/* ORGANIZERS */
+
+.organizers {
+
+    background:
+        radial-gradient(
+            circle,
+            #211706,
+            #050505 70%
+        );
+
+}
+
+.organizer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.organizer-card {
+
+    width: 280px;
+
+    padding: 40px 25px;
+
+    border: 1px solid rgba(218,171,73,0.4);
+
+    background:
+        rgba(255,255,255,0.03);
+
+}
+
+.organizer-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.organizer-card span {
+    color: #999;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.organizer-card h3 {
+    color: #e2bd62;
+    margin-top: 12px;
+}
+
+
+/* FINAL */
 
 .final {
-    min-height: 80vh;
 
     background:
         linear-gradient(
-            rgba(0,0,0,0.8),
+            rgba(0,0,0,0.85),
             rgba(0,0,0,0.95)
         ),
         url("jit-building.jpg");
 
     background-size: cover;
-
     background-position: center;
+
 }
 
 .final h2 {
-    color: #f2dfad;
-
-    text-shadow:
-        0 0 25px rgba(218,171,73,0.25);
+    color: #f5e6bd;
 }
 
-.final p:not(.section-label) {
-    color: #aaa;
-
-    margin-bottom: 35px;
+.final-message {
+    color: #d9aa45;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 20px 0 35px;
 }
 
 
-/* =========================================
-   FOOTER
-========================================= */
+/* FOOTER */
 
 footer {
-    padding: 45px 20px;
+
+    padding: 50px 20px;
 
     text-align: center;
 
-    background: #000;
+    background: black;
 
-    border-top: 1px solid rgba(218,171,73,0.2);
+    border-top:
+        1px solid rgba(218,171,73,0.25);
 
-    color: #999;
 }
 
 .footer-logo {
-    width: 65px;
-
-    height: 65px;
-
-    object-fit: contain;
-
+    width: 70px;
     margin-bottom: 15px;
 }
 
-footer p:first-of-type {
+footer h3 {
     color: #d9aa45;
-
     letter-spacing: 2px;
-
-    font-size: 14px;
-
-    margin-bottom: 8px;
 }
 
 footer p {
-    font-size: 12px;
+    color: #999;
+    font-size: 13px;
+}
+
+.footer-links {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    margin: 25px 0;
+
+    color: #d9aa45;
+
 }
 
 footer small {
-    display: block;
-
-    margin-top: 20px;
-
     color: #555;
 }
 
 
-/* =========================================
-   MOBILE
-========================================= */
+/* MOBILE */
 
 @media (max-width: 700px) {
 
@@ -889,68 +670,29 @@ footer small {
         padding: 80px 20px;
     }
 
-    .hero::before {
-        inset: 10px;
+    .top-logos {
+        flex-direction: column;
     }
 
-    .hero::after {
-        inset: 17px;
-    }
-
-    .jit-logo {
-        width: 80px;
-        height: 80px;
-    }
-
-    .invited {
-        letter-spacing: 3px;
-        font-size: 11px;
-    }
-
-    .present {
-        font-size: 11px;
-    }
-
-    .association-name {
-        font-size: 14px;
-    }
-
-    .hero h1 {
-        letter-spacing: 4px;
-    }
-
-    .welcome {
-        letter-spacing: 2px;
-        font-size: 10px;
+    .logo-text {
+        text-align: center;
     }
 
     .hero-info {
         flex-direction: column;
         align-items: center;
+    }
 
+    .info-box {
         width: 100%;
+        max-width: 340px;
     }
 
-    .hero-info div {
-        width: 100%;
-        max-width: 330px;
+    .event-title h1 {
+        letter-spacing: 3px;
     }
 
-    .quote {
-        padding: 20px;
-
-        font-size: 17px;
-    }
-
-    .location-box {
-        padding: 40px 20px;
-    }
-
-    .location-box h3 {
-        font-size: 18px;
-    }
-
-    .memory-image {
+    .campus-image {
         height: 300px;
     }
 
@@ -958,12 +700,12 @@ footer small {
         gap: 10px;
     }
 
-    .countdown div {
+    .time-box {
         width: 125px;
         height: 125px;
     }
 
-    .countdown span {
+    .time-box span {
         font-size: 36px;
     }
 
