@@ -780,3 +780,136 @@ footer small {
         font-size: 36px;
     }
 }
+/* =================================
+   REGISTRATION SECTION
+================================= */
+
+.registration {
+    background:
+        radial-gradient(
+            circle at center,
+            #2a1d07,
+            #050505 70%
+        );
+}
+
+.registration-message {
+    max-width: 650px;
+    color: #c9c1ad;
+    margin-bottom: 35px;
+}
+
+.registration-card {
+    width: min(700px, 95%);
+
+    padding: 55px 35px;
+
+    border: 1px solid rgba(218, 171, 73, 0.55);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.06),
+            rgba(255,255,255,0.01)
+        );
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.55);
+
+    position: relative;
+}
+
+.registration-card::before {
+    content: "";
+    position: absolute;
+
+    inset: 10px;
+
+    border: 1px solid rgba(218,171,73,0.15);
+
+    pointer-events: none;
+}
+
+.registration-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.registration-card h3 {
+    color: #e2bd62;
+
+    font-size: clamp(20px, 4vw, 30px);
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+.registration-card > p {
+    max-width: 550px;
+
+    margin: 0 auto 30px;
+
+    color: #c9c1ad;
+}
+
+.register-btn {
+    display: inline-block;
+
+    padding: 18px 38px;
+
+    background: #d9aa45;
+
+    color: #080808;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    border: 1px solid #d9aa45;
+
+    transition: 0.4s;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.register-btn:hover {
+    background: transparent;
+
+    color: #f5e5b6;
+
+    box-shadow:
+        0 0 30px rgba(218,171,73,0.35);
+
+    transform: translateY(-3px);
+}
+
+.registration-note {
+    font-size: 12px !important;
+
+    color: #777 !important;
+
+    margin-top: 20px !important;
+
+    margin-bottom: 0 !important;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .registration-card {
+        padding: 45px 20px;
+    }
+
+    .register-btn {
+        width: 100%;
+        max-width: 330px;
+    }
+
+}
