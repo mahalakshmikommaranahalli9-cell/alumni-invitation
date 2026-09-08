@@ -1,3 +1,8 @@
+/* =================================
+   JIT ALUMNI MEET 2026
+   COMPLETE STYLE SHEET
+================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,14 +20,20 @@ body {
     overflow-x: hidden;
 }
 
+/* =================================
+   COMMON
+================================= */
+
 section {
     min-height: 100vh;
     padding: 100px 8%;
     position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
 }
 
@@ -43,8 +54,9 @@ p {
     margin-bottom: 20px;
 }
 
-
-/* HERO */
+/* =================================
+   HERO
+================================= */
 
 .hero {
     background:
@@ -57,7 +69,6 @@ p {
 
     background-size: cover;
     background-position: center;
-
     overflow: hidden;
 }
 
@@ -65,7 +76,10 @@ p {
     content: "";
     position: absolute;
     inset: 20px;
+
     border: 1px solid rgba(218, 171, 73, 0.65);
+
+    pointer-events: none;
 }
 
 .hero-overlay {
@@ -75,7 +89,7 @@ p {
     background:
         radial-gradient(
             circle,
-            rgba(218,171,73,0.15),
+            rgba(218, 171, 73, 0.15),
             transparent 60%
         );
 }
@@ -86,8 +100,9 @@ p {
     max-width: 1100px;
 }
 
-
-/* LOGO */
+/* =================================
+   LOGOS
+================================= */
 
 .top-logos {
     display: flex;
@@ -120,8 +135,9 @@ p {
     letter-spacing: 3px;
 }
 
-
-/* HERO TEXT */
+/* =================================
+   HERO TEXT
+================================= */
 
 .small-title {
     color: #d9aa45;
@@ -164,8 +180,9 @@ p {
     font-size: 14px;
 }
 
-
-/* INFO */
+/* =================================
+   HERO INFO BOXES
+================================= */
 
 .hero-info {
     display: flex;
@@ -184,8 +201,8 @@ p {
     width: 280px;
     padding: 20px;
 
-    background: rgba(0,0,0,0.6);
-    border: 1px solid rgba(218,171,73,0.5);
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(218, 171, 73, 0.5);
 }
 
 .info-icon {
@@ -213,8 +230,66 @@ p {
     color: #aaa;
 }
 
+/* =================================
+   SEP 12 CALENDAR ICON
+================================= */
 
-/* BUTTON */
+.calendar-icon {
+    width: 62px;
+    height: 70px;
+
+    background: #f5f0df;
+    border-radius: 8px;
+    overflow: hidden;
+
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    box-shadow: 0 0 15px rgba(218, 171, 73, 0.3);
+}
+
+.calendar-month {
+    display: block !important;
+
+    width: 100%;
+
+    background: #d9aa45 !important;
+    color: #111 !important;
+
+    font-size: 13px !important;
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
+
+    padding: 7px 0 !important;
+    line-height: 1 !important;
+}
+
+.calendar-day {
+    display: block !important;
+
+    width: 100%;
+
+    color: #111 !important;
+
+    font-size: 30px !important;
+    font-weight: bold !important;
+    letter-spacing: 0 !important;
+
+    padding-top: 8px !important;
+    line-height: 1 !important;
+}
+
+.date-details {
+    text-align: left;
+}
+
+/* =================================
+   BUTTON
+================================= */
 
 .gold-btn {
     display: inline-block;
@@ -233,14 +308,15 @@ p {
 
 .gold-btn:hover {
     background: #d9aa45;
-    color: black;
+    color: #000;
 
     box-shadow:
-        0 0 30px rgba(218,171,73,0.5);
+        0 0 30px rgba(218, 171, 73, 0.5);
 }
 
-
-/* SCROLL */
+/* =================================
+   SCROLL
+================================= */
 
 .scroll {
     position: absolute;
@@ -255,24 +331,27 @@ p {
 
 @keyframes bounce {
 
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
     50% {
         transform: translateY(10px);
     }
-
 }
 
-
-/* INVITATION */
+/* =================================
+   INVITATION
+================================= */
 
 .invitation {
-
     background:
         radial-gradient(
             circle,
             #261b08,
             #050505 70%
         );
-
 }
 
 .message {
@@ -301,8 +380,9 @@ p {
     font-style: italic;
 }
 
-
-/* DETAILS */
+/* =================================
+   EVENT DETAILS
+================================= */
 
 .details {
     background: #050505;
@@ -321,13 +401,13 @@ p {
 
     padding: 40px 25px;
 
-    border: 1px solid rgba(218,171,73,0.4);
+    border: 1px solid rgba(218, 171, 73, 0.4);
 
     background:
         linear-gradient(
             145deg,
-            rgba(255,255,255,0.04),
-            rgba(255,255,255,0.01)
+            rgba(255, 255, 255, 0.04),
+            rgba(255, 255, 255, 0.01)
         );
 
     transition: 0.4s;
@@ -357,18 +437,17 @@ p {
     color: #888;
 }
 
-
-/* CAMPUS */
+/* =================================
+   CAMPUS
+================================= */
 
 .campus {
-
     background:
         radial-gradient(
             circle,
             #211706,
             #050505 70%
         );
-
 }
 
 .campus-image {
@@ -378,7 +457,7 @@ p {
     position: relative;
     overflow: hidden;
 
-    border: 1px solid rgba(218,171,73,0.5);
+    border: 1px solid rgba(218, 171, 73, 0.5);
 }
 
 .campus-image img {
@@ -406,7 +485,7 @@ p {
     background:
         linear-gradient(
             transparent,
-            rgba(0,0,0,0.95)
+            rgba(0, 0, 0, 0.95)
         );
 }
 
@@ -419,31 +498,28 @@ p {
     color: white;
 }
 
-
-/* LOCATION */
+/* =================================
+   LOCATION
+================================= */
 
 .location {
-
     background:
         radial-gradient(
             circle,
             #241a08,
             #050505 70%
         );
-
 }
 
 .location-box {
-
     width: min(750px, 95%);
 
     padding: 50px 30px;
 
-    border: 1px solid rgba(218,171,73,0.55);
+    border: 1px solid rgba(218, 171, 73, 0.55);
 
     background:
-        rgba(255,255,255,0.03);
-
+        rgba(255, 255, 255, 0.03);
 }
 
 .location-icon {
@@ -472,10 +548,10 @@ p {
     padding: 20px;
 
     border-top:
-        1px solid rgba(218,171,73,0.3);
+        1px solid rgba(218, 171, 73, 0.3);
 
     border-bottom:
-        1px solid rgba(218,171,73,0.3);
+        1px solid rgba(218, 171, 73, 0.3);
 
     margin-bottom: 30px;
 }
@@ -497,8 +573,9 @@ p {
     letter-spacing: 2px;
 }
 
-
-/* COUNTDOWN */
+/* =================================
+   COUNTDOWN
+================================= */
 
 .countdown-section {
     background: #050505;
@@ -519,10 +596,10 @@ p {
     flex-direction: column;
     justify-content: center;
 
-    border: 1px solid rgba(218,171,73,0.5);
+    border: 1px solid rgba(218, 171, 73, 0.5);
 
     background:
-        rgba(255,255,255,0.03);
+        rgba(255, 255, 255, 0.03);
 }
 
 .time-box span {
@@ -535,18 +612,17 @@ p {
     letter-spacing: 2px;
 }
 
-
-/* ORGANIZERS */
+/* =================================
+   ORGANIZERS
+================================= */
 
 .organizers {
-
     background:
         radial-gradient(
             circle,
             #211706,
             #050505 70%
         );
-
 }
 
 .organizer-grid {
@@ -557,16 +633,14 @@ p {
 }
 
 .organizer-card {
-
     width: 280px;
 
     padding: 40px 25px;
 
-    border: 1px solid rgba(218,171,73,0.4);
+    border: 1px solid rgba(218, 171, 73, 0.4);
 
     background:
-        rgba(255,255,255,0.03);
-
+        rgba(255, 255, 255, 0.03);
 }
 
 .organizer-icon {
@@ -585,21 +659,20 @@ p {
     margin-top: 12px;
 }
 
-
-/* FINAL */
+/* =================================
+   FINAL SECTION
+================================= */
 
 .final {
-
     background:
         linear-gradient(
-            rgba(0,0,0,0.85),
-            rgba(0,0,0,0.95)
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.95)
         ),
         url("jit-building.jpg");
 
     background-size: cover;
     background-position: center;
-
 }
 
 .final h2 {
@@ -613,20 +686,19 @@ p {
     margin: 20px 0 35px;
 }
 
-
-/* FOOTER */
+/* =================================
+   FOOTER
+================================= */
 
 footer {
-
     padding: 50px 20px;
 
     text-align: center;
 
-    background: black;
+    background: #000;
 
     border-top:
-        1px solid rgba(218,171,73,0.25);
-
+        1px solid rgba(218, 171, 73, 0.25);
 }
 
 .footer-logo {
@@ -645,7 +717,6 @@ footer p {
 }
 
 .footer-links {
-
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -654,15 +725,15 @@ footer p {
     margin: 25px 0;
 
     color: #d9aa45;
-
 }
 
 footer small {
     color: #555;
 }
 
-
-/* MOBILE */
+/* =================================
+   MOBILE
+================================= */
 
 @media (max-width: 700px) {
 
@@ -708,76 +779,4 @@ footer small {
     .time-box span {
         font-size: 36px;
     }
-
-}
-.date-icon {
-    width: 58px;
-    height: 65px;
-    background: #f5f0df;
-    color: #0b1628;
-    border-radius: 6px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    flex-shrink: 0;
-}
-
-.date-icon span {
-    background: #d9aa45;
-    color: #111;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    padding: 5px;
-}
-
-.date-icon strong {
-    color: #0b1628;
-    font-size: 27px;
-    line-height: 1;
-    padding: 7px 0;
-}
-/* CALENDAR ICON - SEP 12 */
-
-.calendar-icon {
-    width: 60px;
-    height: 68px;
-    background: #f5f0df;
-    border-radius: 8px;
-    overflow: hidden;
-    flex-shrink: 0;
-    text-align: center;
-    box-shadow: 0 0 15px rgba(218, 171, 73, 0.3);
-}
-
-.calendar-month {
-    background: #d9aa45;
-    color: #111;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    padding: 7px 0;
-    line-height: 1;
-}
-
-.calendar-day {
-    color: #0b1628;
-    font-size: 28px;
-    font-weight: bold;
-    padding-top: 8px;
-    line-height: 1;
-}
-
-.date-details span {
-    display: block;
-}
-
-.date-details strong {
-    display: block;
-}
-
-.date-details small {
-    display: block;
 }
