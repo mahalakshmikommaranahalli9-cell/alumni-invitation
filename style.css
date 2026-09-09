@@ -114,8 +114,13 @@ p {
 }
 
 .jit-logo {
-    width: 90px;
-    height: 90px;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+.alumini-logo {
+    width: 150px;
+    height: 150px;
     object-fit: contain;
 }
 
@@ -131,7 +136,7 @@ p {
 
 .logo-text span {
     color: #d9aa45;
-    font-size: 13px;
+    font-size: 50px;
     letter-spacing: 3px;
 }
 
